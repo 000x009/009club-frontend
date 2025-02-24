@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 10px;
+    background-color: #000;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    width: 350px;
+    height: 350px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.container:hover {
+    scale: .97;
+}
