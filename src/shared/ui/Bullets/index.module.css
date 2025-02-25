@@ -6,15 +6,9 @@
     justify-content: center;
 }
 
-.navigation {
-    cursor: pointer;
+.bullet {
     transition: 0.25s ease-in-out;
 }
-.navigation:hover {
+.bullet:hover {
     opacity: 0.8;
-}
-
-.current {
-    font-weight: 600;
-    color: var(--primary-color);
 }

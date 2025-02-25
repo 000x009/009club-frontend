@@ -10,7 +10,7 @@ export default function IndexPage() {
       <main className={styles.main}>
         <Events />
       </main>
-      <Footer className={styles.footer} />
+      <Footer />
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import IndexPage from "@/pages/IndexPage/index.jsx";
+import { AppRouter } from "@/app/components/AppRouter.jsx";
 
 function App() {
   return (
     <>
-      <IndexPage />
+      <AppRouter />
     </>
   );
 }

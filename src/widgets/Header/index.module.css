@@ -5,6 +5,10 @@
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 16px 200px;
+}
+
+.logo {
+    cursor: pointer;
 }

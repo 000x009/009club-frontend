@@ -8,4 +8,5 @@
 .container {
     display: flex;
     padding: 0 200px;
+    justify-content: space-between;
 }
