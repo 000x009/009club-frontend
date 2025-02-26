@@ -14,3 +14,26 @@
 .container:hover {
     scale: .97;
 }
+
+.text_container {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.row_container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.row_element {
+    font-size: 16px;
+}
