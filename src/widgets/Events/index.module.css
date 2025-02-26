@@ -1,5 +1,5 @@
 .container {
-    padding: 0 200px;
+    padding: 32px 200px;
     display: flex;
     gap:  40px 100px;
     overflow: hidden;

@@ -10,12 +10,9 @@ export function Header({ className, ...restProps }) {
 
   return (
     <header className={cc(styles.header, className)} {...restProps}>
+      <Logo className={styles.logo} onClick={() => window.open(instagramUrl)} />
       <div className={styles.container}>
         <Navigation />
-        <Logo
-          className={styles.logo}
-          onClick={() => window.open(instagramUrl)}
-        />
         <Bullets bullets={bulletsList} />
       </div>
     </header>
