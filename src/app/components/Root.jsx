@@ -1,10 +1,14 @@
 import App from "./App";
 import ErrorBoundary from "./ErrorBoundary";
+import { APIProvider as GoogleMapAPIProvider } from "@vis.gl/react-google-maps";
+import { appSettings } from "@/app/const/settings.js";
 
 export default function Root() {
-    return (
-        <ErrorBoundary>
-            <App />
-        </ErrorBoundary>
-    );
+  return (
+    <ErrorBoundary>
+      <GoogleMapAPIProvider apiKey={"AIzaSyAhYlq1CjFG74mp5gTRklNvci7P6KTIyNo"}>
+        <App />
+      </GoogleMapAPIProvider>
+    </ErrorBoundary>
+  );
 }

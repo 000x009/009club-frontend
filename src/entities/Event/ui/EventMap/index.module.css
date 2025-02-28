@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.map {
+    width: 150px;
+    height: 150px;
+}
+
+.address {
+    font-weight: 500;
+}

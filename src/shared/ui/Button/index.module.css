@@ -1,0 +1,26 @@
+.button {
+    background-color: rgb(76, 0, 0);
+    color: var(--primary-color);
+    display: flex;
+    white-space: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+.button:hover {
+    opacity: 0.8;
+}
+.button:active {
+    opacity: 0.65;
+}
+.button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.text {
+    font-weight: 600;
+}
