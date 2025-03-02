@@ -3,8 +3,8 @@ import styles from "./index.module.css";
 
 export function Text({ className, children, ...restProps }) {
   return (
-    <label className={cc(className, styles.text)} {...restProps}>
+    <span className={cc(className, styles.text)} {...restProps}>
       {children}
-    </label>
+    </span>
   );
 }

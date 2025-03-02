@@ -4,20 +4,26 @@ import { EventImage } from "@/entities/Event/ui/EventImage/index.jsx";
 import { Navigation } from "@/entities/Event/ui/Navigation/index.jsx";
 import { Button } from "@/shared/ui/Button/index.jsx";
 import { TicketsList } from "@/widgets/TicketList/index.jsx";
+import { useNavigate } from "react-router";
 
 export function EventTickets() {
+  const navigate = useNavigate();
   return (
-    <div className={styles.page}>
+    <div>
       <LogoHeader />
       <main className={styles.main}>
         <div className={styles.main__container}>
-          <EventImage imageSrc={"/src/shared/assets/example.png"} />
+          <div className={styles.image_container}>
+            <EventImage imageSrc={"/src/shared/assets/example.png"} />
+          </div>
           <div className={styles.container}>
             <div className={styles.text__container}>
               <Navigation>TICKETS</Navigation>
               <TicketsList />
             </div>
-            <Button>CONTINUE</Button>
+            <Button onClick={() => navigate("/event/checkout")}>
+              CONTINUE
+            </Button>
           </div>
         </div>
       </main>

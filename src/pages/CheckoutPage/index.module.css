@@ -35,3 +35,13 @@
 .image_container {
     width: 80%;
 }
+
+.total {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input__container {
+    padding-top: 16px;
+}
