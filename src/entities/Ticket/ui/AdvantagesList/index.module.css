@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    color: var(--label-color);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.item:before {
+    content: "• ";
+}

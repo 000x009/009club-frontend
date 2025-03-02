@@ -1,0 +1,37 @@
+.page {
+    height: 100%;
+}
+
+.main {
+    padding: 16px 300px;
+    height: 100%;
+}
+
+.main__container {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    height: 400px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--secondary-bg-color);
+    border-radius: 16px;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-x: hidden;
+    padding-bottom: 16px;
+}

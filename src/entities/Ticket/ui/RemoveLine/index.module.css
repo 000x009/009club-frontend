@@ -1,0 +1,4 @@
+.line {
+    border-top: 1px solid var(--label-color);
+    width: 32px;
+}

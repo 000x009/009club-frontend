@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    gap: 12px;
+}
+
+.full_price {
+    color: var(--label-color);
+    text-decoration: line-through;
+}
+
+.price {
+    font-size: 16px;
+}

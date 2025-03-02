@@ -6,7 +6,7 @@ import { appSettings } from "@/app/const/settings.js";
 export default function Root() {
   return (
     <ErrorBoundary>
-      <GoogleMapAPIProvider apiKey={"AIzaSyAhYlq1CjFG74mp5gTRklNvci7P6KTIyNo"}>
+      <GoogleMapAPIProvider apiKey={appSettings.GOOGLE_MAP_API_KEY}>
         <App />
       </GoogleMapAPIProvider>
     </ErrorBoundary>
