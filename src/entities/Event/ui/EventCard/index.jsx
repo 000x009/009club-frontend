@@ -1,6 +1,7 @@
 import cc from "@/shared/lib/helpers/cc.js";
 import styles from "./index.module.css";
 import { Text } from "@/shared/ui/Text/index.jsx";
+import { Image } from "@/shared/ui/Image/index.jsx"
 
 export function EventCard({
   className,
@@ -17,7 +18,7 @@ export function EventCard({
     <div className={cc(className, styles.container)} {...restProps}>
       <div>
         <div>
-          <img src={photoUrl} alt={name} />
+          <Image src={photoUrl} alt={name} />
         </div>
         <div className={styles.text_container}>
           <div>
