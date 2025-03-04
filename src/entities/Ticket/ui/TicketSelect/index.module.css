@@ -35,3 +35,34 @@
     display: flex;
     gap: 8px
 }
+
+
+/* xs */
+@media (max-width: 475px) {
+    .right__container {
+        gap: 8px;
+    }
+    .name {
+        font-size: 14px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .right__container {
+        gap: 8px;
+    }
+    .name {
+        font-size: 14px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .right__container {
+        gap: 8px;
+    }
+    .name {
+        font-size: 14px;
+    }
+}

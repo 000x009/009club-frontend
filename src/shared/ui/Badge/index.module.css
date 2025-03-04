@@ -12,3 +12,24 @@
     font-weight: 500;
     font-size: 12px;
 }
+
+/* xs */
+@media (max-width: 475px) {
+    .text {
+        font-size: 10px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .text {
+        font-size: 10px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .text {
+        font-size: 10px;
+    }
+}
