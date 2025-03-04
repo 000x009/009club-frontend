@@ -12,3 +12,64 @@
 .bullet:hover {
     opacity: 0.8;
 }
+
+@media (max-width: 325px) {
+    .container {
+        gap: 8px;
+    }
+
+    .bullet {
+        font-size: 8px;
+    }
+    .bullet:hover {
+        opacity: 1;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        gap: 12px;
+    }
+
+    .bullet {
+        font-size: 14px;
+    }
+    .bullet:hover {
+        opacity: 1;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        gap: 12px;
+    }
+
+    .bullet {
+        font-size: 14px;
+    }
+    .bullet:hover {
+        opacity: 1;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+}
+
+/* xl */
+@media (min-width: 1280px) {
+
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+
+}

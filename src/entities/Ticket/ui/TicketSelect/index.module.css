@@ -19,10 +19,10 @@
 
 .add_icon {
     cursor: pointer;
-    transition: scale .075s ease-in-out;
+    transition: scale ease-in-out;
 }
 .add_icon:active {
-    scale: 1.2;
+    scale: 0.9;
 }
 
 .name {

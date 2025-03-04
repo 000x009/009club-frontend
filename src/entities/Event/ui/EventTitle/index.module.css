@@ -12,3 +12,34 @@
     font-weight: 500;
     color: var(--label-color);
 }
+
+
+/* xs */
+@media (max-width: 475px) {
+    .title {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 14px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .title {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 14px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 14px;
+    }
+}

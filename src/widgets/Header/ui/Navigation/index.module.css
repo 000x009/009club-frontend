@@ -18,3 +18,10 @@
     font-weight: 600;
     color: var(--primary-color);
 }
+
+
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+}

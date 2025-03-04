@@ -13,7 +13,7 @@ export function Header({ className, ...restProps }) {
       <Logo className={styles.logo} onClick={() => window.open(instagramUrl)} />
       <div className={styles.container}>
         <Navigation />
-        <Bullets bullets={bulletsList} />
+        <Bullets bullets={bulletsList} className={styles.bullets} />
       </div>
     </header>
   );

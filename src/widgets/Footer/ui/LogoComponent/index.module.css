@@ -12,6 +12,44 @@
 }
 
 .company_name {
+    display: initial;
     writing-mode: sideways-lr;
     line-height: 1;
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        gap: 4px;
+    }
+    .company_name {
+        display: none;
+    }
+    .company_mark {
+        font-size: 14px;
+    }
+    .text_container {
+        justify-content: flex-end;
+        padding: 4px 0;
+    }
+    .logo {
+        height: 75px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        gap: 4px;
+    }
+    .company_name {
+        display: none;
+    }
+    .text_container {
+        justify-content: flex-end;
+        padding: 4px 0;
+    }
+    .logo {
+        height: 75px;
+    }
 }

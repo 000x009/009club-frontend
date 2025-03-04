@@ -1,15 +1,16 @@
 import { Header } from "@/widgets/Header/index.jsx";
-import { Footer } from "@/widgets/Footer/index.jsx";
 import { Events } from "@/widgets/Events/index.jsx";
 import styles from "./index.module.css";
+import { Page } from "@/pages/Page/index.jsx";
+import { Main } from "@/shared/ui/Main/index.jsx";
 
 export default function IndexPage() {
   return (
-    <div className={styles.page}>
+    <Page className={styles.page}>
       <Header />
-      <main className={styles.main}>
+      <Main className={styles.main}>
         <Events />
-      </main>
-    </div>
+      </Main>
+    </Page>
   );
 }

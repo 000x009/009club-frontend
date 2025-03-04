@@ -5,13 +5,15 @@ import { Navigation } from "@/entities/Event/ui/Navigation/index.jsx";
 import { Button } from "@/shared/ui/Button/index.jsx";
 import { TicketsList } from "@/widgets/TicketList/index.jsx";
 import { useNavigate } from "react-router";
+import { Page } from "@/pages/Page/index.jsx";
+import { Main } from "@/shared/ui/Main/index.jsx";
 
 export function EventTickets() {
   const navigate = useNavigate();
   return (
-    <div>
+    <Page>
       <LogoHeader />
-      <main className={styles.main}>
+      <Main>
         <div className={styles.main__container}>
           <div className={styles.image_container}>
             <EventImage imageSrc={"/src/shared/assets/example.png"} />
@@ -26,7 +28,7 @@ export function EventTickets() {
             </Button>
           </div>
         </div>
-      </main>
-    </div>
+      </Main>
+    </Page>
   );
 }

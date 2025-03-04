@@ -1,24 +1,11 @@
 import styles from "./index.module.css";
-import { Text } from "@/shared/ui/Text/index.jsx";
 import { EventTitle } from "@/entities/Event/ui/EventTitle/index.jsx";
-import { Button } from "@/shared/ui/Button/index.jsx";
 import { Information } from "@/entities/Event/ui/Information/index.jsx";
 import { EventMap } from "@/entities/Event/ui/EventMap/index.jsx";
-import { useNavigate } from "react-router";
-import { EventImage } from "@/entities/Event/ui/EventImage/index.jsx";
 
 export function EventInformationBlock() {
-  const navigate = useNavigate();
-  const onButtonClick = () => {
-    navigate("/event/tix");
-  };
-
   return (
     <div className={styles.container}>
-      <div className={styles["age-group-container"]}>
-        <Text className={styles["age-group"]}>18+</Text>
-      </div>
-      <EventImage imageSrc={"/src/shared/assets/example.png"} />
       <div className={styles["info-container"]}>
         <div className={styles["info-basic-container"]}>
           <EventTitle
@@ -41,7 +28,6 @@ export function EventInformationBlock() {
             />
           </div>
         </div>
-        <Button onClick={onButtonClick}>CHOOSE TICKETS</Button>
       </div>
     </div>
   );

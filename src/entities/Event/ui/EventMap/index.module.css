@@ -13,3 +13,47 @@
 .address {
     font-weight: 500;
 }
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        padding: 0 0 12px;
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+    }
+    
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 0 12px;
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0 12px;
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 0 12px;
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+    }
+}
