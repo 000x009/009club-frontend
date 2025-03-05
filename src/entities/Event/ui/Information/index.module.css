@@ -7,30 +7,11 @@
     font-size: 20px;
 }
 
-.label {
-    color: var(--label-color);
-}
-
-.value {
-    color: white;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
 
 /* xs */
 @media (max-width: 475px) {
     .header {
         font-size: 16px;
-    }
-    .label {
-        font-size: 14px;
-    }
-    .value {
-        font-size: 14px;
     }
 }
 
@@ -39,23 +20,11 @@
     .header {
         font-size: 16px;
     }
-    .label {
-        font-size: 14px;
-    }
-    .value {
-        font-size: 14px;
-    }
 }
 
 /* md */
 @media (max-width: 768px) {
     .header {
         font-size: 16px;
-    }
-    .label {
-        font-size: 14px;
-    }
-    .value {
-        font-size: 14px;
     }
 }

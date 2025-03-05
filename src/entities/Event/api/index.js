@@ -13,4 +13,8 @@ export class EventAPI {
             }
         })
     }
+
+    static async get(id) {
+        return axios.get(`${appSettings.BACKEND_URL}${this.baseEndpoint}${id}`)
+    }
 }

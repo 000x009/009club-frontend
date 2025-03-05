@@ -17,7 +17,7 @@ export function EventCards({
     return (
         <div className={styles.container}>
             {total > 0 && events.map((event) => (
-                <EventCard key={event.id} event={event} onClick={onEventClick}/>
+                <EventCard key={event.id} event={event} onClick={() => onEventClick(event.id)}/>
             ))}
             {/* {
                 (isFetchingNextPage || isLoading) &&
