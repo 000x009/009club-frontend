@@ -1,0 +1,15 @@
+export const bg = {
+    "Events": "Събития",
+    "DAY": "ДЕН",
+    "DATE": "ДАТА",
+    "HOURS": "ЧАСОВЕ",
+    "DRESS CODE": "ДРЕС КОД",
+    "INFORMATION": "ИНФОРМАЦИЯ",
+    "TICKETS": "БИЛЕТИ",
+    "CHOOSE TICKETS": "ИЗБИРА БИЛЕТИ",
+    "PAY": "ОПЛАТА",
+    "CONTINUE": "ПРОДОЛЖАВАЙ",
+    "CHECKOUT": "ОФОРМЛЕНЕ НА ПОРЪЧКА",
+    "PAYMENT METHOD": "СПОСОБ НА ПЛАЩАНЕ",
+    "Total": "Итого",
+};

@@ -1,0 +1,15 @@
+export const en = {
+  "Events": "Events",
+  "DAY": "DAY",
+  "DATE": "DATE",
+  "HOURS": "HOURS",
+  "DRESS CODE": "DRESS CODE",
+  "INFORMATION": "INFORMATION",
+  "TICKETS": "TICKETS",
+  "CHOOSE TICKETS": "CHOOSE TICKETS",
+  "PAY": "PAY",
+  "CONTINUE": "CONTINUE",
+  "CHECKOUT": "CHECKOUT",
+  "PAYMENT METHOD": "PAYMENT METHOD",
+  "Total": "Total",
+};

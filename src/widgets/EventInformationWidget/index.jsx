@@ -8,9 +8,8 @@ import { Button } from "@/shared/ui/Button/index.jsx";
 export function EventInformationWidget({ data }) {
   const navigate = useNavigate();
   const onButtonClick = () => {
-    navigate("/event/tix");
+    navigate(`/event/${data.id}/tickets`);
   };
-  console.log(data)
 
     return (
         <div className={styles.main__container}>

@@ -10,8 +10,8 @@ export function AppRouter() {
       <Routes>
         <Route path={"/"} element={<IndexPage />} />
         <Route path={"/event/:id"} element={<EventInformation />} />
-        <Route path={"/event/tix"} element={<EventTickets />} />
-        <Route path={"/event/checkout"} element={<CheckoutPage />} />
+        <Route path={"/event/:id/tickets"} element={<EventTickets />} />
+        <Route path={"/event/:id/checkout"} element={<CheckoutPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
