@@ -20,8 +20,8 @@ export function EventInformationBlock({event}) {
             />
             <EventMap
               address={event.location.address}
-              latitude={event.location.coordinates.y}
-              longitude={event.location.coordinates.x}
+              latitude={event.location.coordinates.x}
+              longitude={event.location.coordinates.y}
             />
           </div>
         </div>

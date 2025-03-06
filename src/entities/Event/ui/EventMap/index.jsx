@@ -12,6 +12,7 @@ export function EventMap({
   address,
   ...restProps
 }) {
+  console.log(longitude, latitude)
   return (
     <div className={cc(className, styles.container)} {...restProps}>
       <Text className={styles.address}>{address}</Text>
