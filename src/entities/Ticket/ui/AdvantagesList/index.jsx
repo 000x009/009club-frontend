@@ -4,9 +4,9 @@ import { Text } from "@/shared/ui/Text/index.jsx";
 export function AdvantagesList({ className, advantages, ...restProps }) {
   return (
     <div className={styles.container} {...restProps}>
-      {advantages.map((advantage, index) => (
-        <Text key={index} className={styles.item}>
-          {advantage}
+      {advantages.map((advantage) => (
+        <Text key={advantage.id} className={styles.item}>
+          {advantage.name}
         </Text>
       ))}
     </div>

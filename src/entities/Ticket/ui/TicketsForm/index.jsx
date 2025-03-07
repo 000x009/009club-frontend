@@ -1,7 +1,9 @@
 import styles from "./index.module.css";
 import { TicketNameInput } from "@/entities/Ticket/ui/TicketNameInput/index.jsx";
+import { useFormContext } from "react-hook-form";
 
-export function TicketsForm({ className, form, formController, ...restProps }) {
+export function TicketsForm({ className, formController, ...restProps }) {
+  const form = useFormContext();
   const inputRegisterOptions = {
     required: "Full name is required",
     maxLength: 50,
