@@ -6,6 +6,7 @@ export function PaypalPayment({
   className,
   handleCreateOrder,
   handleCaptureOrder,
+  disabled,
   ...restProps
 }) {
     const style = {
@@ -14,11 +15,17 @@ export function PaypalPayment({
         color: "gold",
         disableMaxWidth: true,
         currency: "EUR",
+        tagline: false,
     };
 
   return (
     <div className={cc(styles.paypal_payment, className)} {...restProps}>
-      <PayPalButtons style={style} createOrder={handleCreateOrder} onApprove={handleCaptureOrder} />
+      <PayPalButtons
+        style={style}
+        createOrder={handleCreateOrder}
+        onApprove={handleCaptureOrder}
+        disabled={disabled}
+      />
     </div>
   );
 }

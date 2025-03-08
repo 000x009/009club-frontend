@@ -2,7 +2,6 @@ import { LogoHeader } from "@/shared/ui/LogoHeader/index.jsx";
 import styles from "./index.module.css";
 import { EventImage } from "@/entities/Event/ui/EventImage/index.jsx";
 import { Navigation } from "@/entities/Event/ui/Navigation/index.jsx";
-import { Button } from "@/shared/ui/Button/index.jsx";
 import { CartItemsList } from "@/widgets/CartItemsList/index.jsx";
 import { Total } from "@/entities/Cart/ui/Total/index.jsx";
 import { Divider } from "@/shared/ui/Divider/index.jsx";
@@ -34,9 +33,8 @@ export function CheckoutPage() {
                 <Divider />
                 <Total>{data.total_amount_usd}</Total>
               </div>
-              <Payment orderId={orderId}/>
             </div>
-            <Button>PAY</Button>
+              <Payment orderId={orderId}/>
           </div>
         </div>
       </Main>

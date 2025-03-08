@@ -15,7 +15,6 @@ import { formatFormToUserTickets } from "@/entities/Ticket/lib/helpers/formatFor
 import { useCreateOrder } from "@/entities/Cart/lib/hooks/useCreateOrder";
 import { Input } from "@/shared/ui/Input/index.jsx";
 
-
 export function EventTickets() {
   const { id } = useParams();
   const { data } = useTicketList(id);
@@ -25,8 +24,16 @@ export function EventTickets() {
   })
 
   const handleClick = () => {
-    const tickets = form.getValues().tickets;
-    
+    const formValues = form.getValues();
+    const tickets = formValues.tickets;
+    const email = formValues.email;
+
+    if (!email) {
+      form.setError("email", { message: "Email is required" });
+      alert("Email is required");
+      return;
+    }
+  
     const isValid = isFormValid(tickets)
     if (!isValid) return
 
@@ -37,6 +44,7 @@ export function EventTickets() {
       event_id: id,
       order_items: cartItems,
       user_tickets: userTickets,
+      email: email,
     }
 
     handleCreateOrder(orderData)
@@ -55,10 +63,8 @@ export function EventTickets() {
               <Navigation>TICKETS</Navigation>
               <FormProvider {...form}>
                 <TicketsList tickets={data?.items ?? []} />
+                <Input className={styles.input__container} placeholder={"Email"} {...form.register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })} />
               </FormProvider>
-              <div className={styles.input__container}>
-                <Input placeholder={"Email"} />
-              </div>
             </div>
             <Button onClick={handleClick} isLoading={isLoading}>
               CONTINUE
