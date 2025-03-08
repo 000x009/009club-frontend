@@ -48,6 +48,9 @@
     width: 80%;
 }
 
+.input__container {
+    padding-top: 16px;
+}
 
 /* xs */
 @media (max-width: 475px) {

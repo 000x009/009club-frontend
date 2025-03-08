@@ -11,7 +11,8 @@ export function useCreateOrder() {
         mutationKey: ['order', 'create'],
         mutationFn: async (data) => await OrderAPI.create(data),
         onSuccess: (data) => {
-            navigate(`/event/${data.event_id}/checkout`);
+            console.log(data.data.event_id)
+            navigate(`/event/${data.data.event_id}/checkout/${data.data.id}`);
         }
     })
 

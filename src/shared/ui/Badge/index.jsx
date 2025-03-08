@@ -3,7 +3,6 @@ import { Text } from "@/shared/ui/Text/index.jsx";
 import styles from "./index.module.css";
 
 export function Badge({ className, children, ...restProps }) {
-  console.log(children);
   return (
     <label className={cc(className, styles.container)} {...restProps}>
       <Text className={styles.text}>{children}</Text>

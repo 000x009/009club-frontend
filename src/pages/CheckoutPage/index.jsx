@@ -4,18 +4,19 @@ import { EventImage } from "@/entities/Event/ui/EventImage/index.jsx";
 import { Navigation } from "@/entities/Event/ui/Navigation/index.jsx";
 import { Button } from "@/shared/ui/Button/index.jsx";
 import { CartItemsList } from "@/widgets/CartItemsList/index.jsx";
-import { Input } from "@/shared/ui/Input/index.jsx";
-import { PaymentMethodForm } from "@/widgets/PaymentMethodForm/index.jsx";
 import { Total } from "@/entities/Cart/ui/Total/index.jsx";
 import { Divider } from "@/shared/ui/Divider/index.jsx";
 import { Page } from "@/pages/Page/index.jsx";
 import { Main } from "@/shared/ui/Main/index.jsx";
+import { useParams } from "react-router";
+import { useOrder } from "@/entities/Cart/lib/hooks/useOrder";
+import { Payment } from "@/widgets/Payment/index.jsx";
 
 export function CheckoutPage() {
-  const items = [
-    { id: 1, name: "General ticket", quantity: 4, totalPrice: 120 },
-    { id: 2, name: "VIP ticket", quantity: 2, totalPrice: 40 },
-  ];
+  const { orderId } = useParams();
+  const { data, isLoading } = useOrder(orderId);
+
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <Page>
@@ -28,15 +29,12 @@ export function CheckoutPage() {
           <div className={styles.container}>
             <div className={styles.text__container}>
               <Navigation>CHECKOUT</Navigation>
-              <CartItemsList items={items} />
-              <PaymentMethodForm />
+              <CartItemsList items={data.order_items} />
               <div className={styles.total}>
                 <Divider />
-                <Total>160</Total>
+                <Total>{data.total_amount_usd}</Total>
               </div>
-              <div className={styles.input__container}>
-                <Input placeholder={"Email"} />
-              </div>
+              <Payment orderId={orderId}/>
             </div>
             <Button>PAY</Button>
           </div>

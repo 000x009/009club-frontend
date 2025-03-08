@@ -13,6 +13,8 @@ import { isFormValid } from "@/entities/Ticket/lib/helpers/isFormValid";
 import { formatFormToCartItems } from "@/entities/Ticket/lib/helpers/formatFormToCartItems";
 import { formatFormToUserTickets } from "@/entities/Ticket/lib/helpers/formatFormToUserTickets";
 import { useCreateOrder } from "@/entities/Cart/lib/hooks/useCreateOrder";
+import { Input } from "@/shared/ui/Input/index.jsx";
+
 
 export function EventTickets() {
   const { id } = useParams();
@@ -54,6 +56,9 @@ export function EventTickets() {
               <FormProvider {...form}>
                 <TicketsList tickets={data?.items ?? []} />
               </FormProvider>
+              <div className={styles.input__container}>
+                <Input placeholder={"Email"} />
+              </div>
             </div>
             <Button onClick={handleClick} isLoading={isLoading}>
               CONTINUE

@@ -2,7 +2,6 @@ import { getUserLanguage } from "./getUserLanguage"
 
 export function parseTime(time) {
     let language = getUserLanguage()
-    console.log(language)
 
     const options = {
         month: "long",

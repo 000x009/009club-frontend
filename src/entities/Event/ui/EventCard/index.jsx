@@ -5,7 +5,6 @@ import { Image } from "@/shared/ui/Image/index.jsx"
 import { parseTime } from "../../../../shared/lib/helpers/parseTime";
 
 export function EventCard({className, event, ...restProps}) {
-  console.log(event);
   return (
     <div className={cc(className, styles.container)} {...restProps}>
       <div>

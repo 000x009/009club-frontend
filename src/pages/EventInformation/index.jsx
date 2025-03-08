@@ -8,7 +8,6 @@ import { EventInformationWidget } from "../../widgets/EventInformationWidget";
 export function EventInformation() {
   const params = useParams()
   const {data, isLoading} = useEvent(params.id)
-  console.log(isLoading)
 
   return (
     <Page>
