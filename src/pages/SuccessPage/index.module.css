@@ -10,3 +10,13 @@
     align-items: center;
     text-align: center;
 }
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 24px;
+    font-weight: 400;
+}

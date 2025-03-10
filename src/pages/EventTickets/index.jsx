@@ -8,7 +8,7 @@ import { useParams } from "react-router";
 import { Page } from "@/pages/Page/index.jsx";
 import { Main } from "@/shared/ui/Main/index.jsx";
 import { useTicketList } from "@/entities/Ticket/lib/hooks/useTicketList";
-import { useForm, FormProvider } from "react-hook-form"
+import { useForm, FormProvider } from "react-hook-form";
 import { isFormValid } from "@/entities/Ticket/lib/helpers/isFormValid";
 import { formatFormToCartItems } from "@/entities/Ticket/lib/helpers/formatFormToCartItems";
 import { formatFormToUserTickets } from "@/entities/Ticket/lib/helpers/formatFormToUserTickets";
@@ -17,11 +17,15 @@ import { Input } from "@/shared/ui/Input/index.jsx";
 
 export function EventTickets() {
   const { id } = useParams();
-  const { data } = useTicketList(id);
+  const {
+    data,
+    isLoading: isLoadingTickets,
+    isFetchingNextPage,
+  } = useTicketList(id);
   const { handleCreateOrder, isLoading } = useCreateOrder();
   const form = useForm({
     mode: "onChange",
-  })
+  });
 
   const handleClick = () => {
     const formValues = form.getValues();
@@ -33,9 +37,9 @@ export function EventTickets() {
       alert("Email is required");
       return;
     }
-  
-    const isValid = isFormValid(tickets)
-    if (!isValid) return
+
+    const isValid = isFormValid(tickets);
+    if (!isValid) return;
 
     const cartItems = formatFormToCartItems(tickets);
     const userTickets = formatFormToUserTickets(tickets);
@@ -45,9 +49,9 @@ export function EventTickets() {
       order_items: cartItems,
       user_tickets: userTickets,
       email: email,
-    }
+    };
 
-    handleCreateOrder(orderData)
+    handleCreateOrder(orderData);
   };
 
   return (
@@ -62,8 +66,19 @@ export function EventTickets() {
             <div className={styles.text__container}>
               <Navigation>TICKETS</Navigation>
               <FormProvider {...form}>
-                <TicketsList tickets={data?.items ?? []} />
-                <Input className={styles.input__container} placeholder={"Email"} {...form.register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })} />
+                <TicketsList
+                  tickets={data?.items ?? []}
+                  isLoading={isLoadingTickets}
+                  isFetching={isFetchingNextPage}
+                />
+                <Input
+                  className={styles.input__container}
+                  placeholder={"Email"}
+                  {...form.register("email", {
+                    required: true,
+                    pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  })}
+                />
               </FormProvider>
             </div>
             <Button onClick={handleClick} isLoading={isLoading}>

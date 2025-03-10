@@ -12,10 +12,10 @@ export function SuccessPage() {
             <Main className={styles.main}>
                 <TicketIcon />
                 <div className={styles.content}>
-                    <Text>
+                    <Text className={styles.title}>
                         Success!
                     </Text>
-                    <Text>
+                    <Text className={styles.description}>
                         We've sent you an email with your tickets.
                     </Text>
                 </div>

@@ -5,7 +5,7 @@ import { Trans } from "react-i18next";
 export function Text({ className, children, ...restProps }) {
   return (
     <span className={cc(className, styles.text)} {...restProps}>
-      {typeof children === 'string' ? <Trans>{children}</Trans> : children}
+      {typeof children === "string" ? <Trans>{children}</Trans> : children}
     </span>
   );
 }

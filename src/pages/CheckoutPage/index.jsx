@@ -10,12 +10,12 @@ import { Main } from "@/shared/ui/Main/index.jsx";
 import { useParams } from "react-router";
 import { useOrder } from "@/entities/Cart/lib/hooks/useOrder";
 import { Payment } from "@/widgets/Payment/index.jsx";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export function CheckoutPage() {
   const { orderId } = useParams();
-  const { data, isLoading } = useOrder(orderId);
-
-  if (isLoading) return <div>Loading...</div>;
+  const { data, isLoading, isFetching } = useOrder(orderId);
 
   return (
     <Page>
@@ -28,13 +28,19 @@ export function CheckoutPage() {
           <div className={styles.container}>
             <div className={styles.text__container}>
               <Navigation>CHECKOUT</Navigation>
-              <CartItemsList items={data.order_items} />
+              <CartItemsList
+                items={data?.order_items ?? []}
+                isLoading={isLoading}
+                isFetching={isFetching}
+              />
               <div className={styles.total}>
                 <Divider />
-                <Total>{data.total_amount_usd}</Total>
+                <Total>
+                  {data?.total_amount_usd || <Skeleton width={20} />}
+                </Total>
               </div>
             </div>
-              <Payment orderId={orderId}/>
+            <Payment orderId={orderId} />
           </div>
         </div>
       </Main>

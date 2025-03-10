@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    gap: 8px;
+}
+
+.quantity {
+    color: var(--label-color);
+}
+
+.right {
+    display: flex;
+}
+
+.skeleton {
+    flex: 1;
+}

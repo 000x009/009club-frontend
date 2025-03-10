@@ -5,13 +5,34 @@
     gap: 10px;
     background-color: #000;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-    max-width: 400px;
+    width: 400px;
     max-height: 400px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .container:hover {
     scale: 0.97;
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+       width: 300px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        width: 300px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        width: 300px;
+    }
 }
 
 .text_container {
@@ -21,11 +42,12 @@
     width: 100%;
     gap: 8px;
     color: #fff;
+    flex: 1;
 }
 
 .title {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    flex: 1;
 }
 
 .row_container {
@@ -33,14 +55,18 @@
     width: 100%;
     gap: 12px;
     justify-content: space-between;
+    flex: 1;
 }
 
 .row_element {
-    font-size: 16px;
+    flex: 1;
 }
 
 .image__container {
-    position: relative;
-    width: auto;
-    height: auto;
+    flex: 1;
+    height: 200px;
+}
+
+.image {
+    height: 100%;
 }
