@@ -12,10 +12,13 @@ import { useOrder } from "@/entities/Cart/lib/hooks/useOrder";
 import { Payment } from "@/widgets/Payment/index.jsx";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { getStorageFileURL } from "@/shared/lib/helpers/getStorageFileURL.js";
+import { useEvent } from "@/entities/Event/lib/hooks/useEvent.js";
 
 export function CheckoutPage() {
-  const { orderId } = useParams();
+  const { id, orderId } = useParams();
   const { data, isLoading, isFetching } = useOrder(orderId);
+  const { data: eventData } = useEvent(id);
 
   return (
     <Page>
@@ -23,7 +26,12 @@ export function CheckoutPage() {
       <Main>
         <div className={styles.main__container}>
           <div className={styles.image_container}>
-            <EventImage imageSrc={"/src/shared/assets/example.png"} />
+            <EventImage
+              imageSrc={
+                eventData !== undefined &&
+                getStorageFileURL(eventData.photo.bucket, eventData.photo.key)
+              }
+            />
           </div>
           <div className={styles.container}>
             <div className={styles.text__container}>

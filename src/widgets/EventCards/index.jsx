@@ -13,13 +13,11 @@ export function EventCards({ events, isFetchingNextPage, isLoading, total }) {
     <div className={styles.container}>
       {total > 0 &&
         events.map((event) => (
-          <div>
-            <EventCard
-              key={event.id}
-              event={event}
-              onClick={() => onEventClick(event.id)}
-            />
-          </div>
+          <EventCard
+            key={event.id}
+            event={event}
+            onClick={() => onEventClick(event.id)}
+          />
         ))}
       {(isFetchingNextPage || isLoading) && <EventCardSkeletons />}
     </div>

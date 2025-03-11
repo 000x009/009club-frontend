@@ -5,13 +5,34 @@
     gap: 10px;
     background-color: #000;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-    max-width: 400px;
+    width: 400px;
     max-height: 400px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .container:hover {
     scale: 0.97;
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        width: 300px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        width: 300px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        width: 300px;
+    }
 }
 
 .text_container {
@@ -42,5 +63,7 @@
 .image__container {
     position: relative;
     width: auto;
-    height: auto;
+    height: 200px;
+    overflow: hidden;
+    flex: 1;
 }

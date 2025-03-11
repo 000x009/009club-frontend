@@ -3,13 +3,19 @@ import styles from "./index.module.css";
 import { Text } from "@/shared/ui/Text/index.jsx";
 import { Image } from "@/shared/ui/Image/index.jsx";
 import { parseTime } from "@/shared/lib/helpers/parseTime.js";
+import { getStorageFileURL } from "@/shared/lib/helpers/getStorageFileURL.js";
 
 export function EventCard({ className, event, ...restProps }) {
   return (
     <div className={cc(className, styles.container)} {...restProps}>
       <div>
         <div className={styles.image__container}>
-          <Image src={"/src/shared/assets/example.png"} alt={event.title} />
+          <Image
+            src={getStorageFileURL(event.photo.bucket, event.photo.key)}
+            alt={event.title}
+            skeletonHeight={200}
+            skeletonWidth={400}
+          />
         </div>
         <div className={styles.text_container}>
           <div>

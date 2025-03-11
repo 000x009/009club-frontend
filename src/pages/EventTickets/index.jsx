@@ -14,6 +14,8 @@ import { formatFormToCartItems } from "@/entities/Ticket/lib/helpers/formatFormT
 import { formatFormToUserTickets } from "@/entities/Ticket/lib/helpers/formatFormToUserTickets";
 import { useCreateOrder } from "@/entities/Cart/lib/hooks/useCreateOrder";
 import { Input } from "@/shared/ui/Input/index.jsx";
+import { getStorageFileURL } from "@/shared/lib/helpers/getStorageFileURL.js";
+import { useEvent } from "@/entities/Event/lib/hooks/useEvent.js";
 
 export function EventTickets() {
   const { id } = useParams();
@@ -22,6 +24,7 @@ export function EventTickets() {
     isLoading: isLoadingTickets,
     isFetchingNextPage,
   } = useTicketList(id);
+  const { data: eventData } = useEvent(id);
   const { handleCreateOrder, isLoading } = useCreateOrder();
   const form = useForm({
     mode: "onChange",
@@ -60,7 +63,12 @@ export function EventTickets() {
       <Main>
         <div className={styles.main__container}>
           <div className={styles.image_container}>
-            <EventImage imageSrc={"/src/shared/assets/example.png"} />
+            <EventImage
+              imageSrc={
+                eventData !== undefined &&
+                getStorageFileURL(eventData.photo.bucket, eventData.photo.key)
+              }
+            />
           </div>
           <div className={styles.container}>
             <div className={styles.text__container}>
