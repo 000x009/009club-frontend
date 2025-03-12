@@ -4,6 +4,7 @@ import { EventInformation } from "@/pages/EventInformation/index.jsx";
 import { EventTickets } from "@/pages/EventTickets/index.jsx";
 import { CheckoutPage } from "@/pages/CheckoutPage/index.jsx";
 import { SuccessPage } from "@/pages/SuccessPage/index.jsx";
+import { UserTicketInfoPage } from "@/pages/UserTicketInfoPage/index.jsx";
 
 export function AppRouter() {
   return (
@@ -14,6 +15,7 @@ export function AppRouter() {
         <Route path={"/event/:id/tickets"} element={<EventTickets />} />
         <Route path={"/event/:id/checkout/:orderId"} element={<CheckoutPage />} />
         <Route path={"/success"} element={<SuccessPage />} />
+        <Route path={"/user-ticket/:id"} element={<UserTicketInfoPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
