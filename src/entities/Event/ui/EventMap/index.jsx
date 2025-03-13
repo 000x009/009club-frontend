@@ -16,6 +16,10 @@ export function EventMap({
 }) {
   console.log(latitude, longitude);
 
+  if (latitude === null || longitude === null) {
+    return null;
+  }
+
   return (
     <div className={cc(className, styles.container)} {...restProps}>
       <Text className={styles.address}>{address || <Skeleton />}</Text>
