@@ -14,6 +14,8 @@ export function EventMap({
   address,
   ...restProps
 }) {
+  console.log(latitude, longitude);
+
   return (
     <div className={cc(className, styles.container)} {...restProps}>
       <Text className={styles.address}>{address || <Skeleton />}</Text>
@@ -21,14 +23,14 @@ export function EventMap({
         <Map
           mapId={appSettings.GOOGLE_EVENT_MAP_ID}
           className={styles.map}
-          defaultCenter={{ lat: latitude, lng: longitude }}
+          defaultCenter={{ lat: parseFloat(latitude), lng: parseFloat(longitude) }}
           defaultZoom={12}
           gestureHandling={"greedy"}
           disableDefaultUI={false}
           colorScheme={"DARK"}
           reuseMaps={true}
         >
-          <AdvancedMarker position={{ lat: latitude, lng: longitude }}>
+          <AdvancedMarker position={{ lat: parseFloat(latitude), lng: parseFloat(longitude) }}>
             <Pin background={"#FE0000"} glyphColor={"#fff"} />
           </AdvancedMarker>
         </Map>
