@@ -11,7 +11,7 @@ export function PaypalPayment({
 }) {
     const style = {
         shape: "rect",
-        layout: "horizontal",
+        layout: "vertical",
         color: "gold",
         disableMaxWidth: true,
         currency: "EUR",

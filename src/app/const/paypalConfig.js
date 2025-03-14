@@ -8,7 +8,8 @@ const languagePaypal = () => {
 }
 
 export const paypalOptions = {
-    clientId: appSettings.PAYPAL_CLIENT_ID,
+    "client-id": appSettings.PAYPAL_CLIENT_ID,
     currency: "EUR",
     locale: languagePaypal(),
+    components: "buttons",
 };
