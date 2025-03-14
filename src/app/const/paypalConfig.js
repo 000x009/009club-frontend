@@ -12,4 +12,7 @@ export const paypalOptions = {
     currency: "EUR",
     locale: languagePaypal(),
     components: "buttons",
+    "buyer-country": "BG",
+    debug: true,
+    "data-page-type": "checkout",
 };
