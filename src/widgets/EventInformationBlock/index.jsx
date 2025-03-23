@@ -9,6 +9,7 @@ export function EventInformationBlock({ event }) {
       <div className={styles["info-container"]}>
         <div className={styles["info-basic-container"]}>
           <EventTitle
+            className={styles.title}
             title={event !== undefined ? event.title : null}
             description={event !== undefined ? event.description : null}
           />
@@ -17,17 +18,20 @@ export function EventInformationBlock({ event }) {
               startAt={event !== undefined ? event.start_at : null}
               endAt={event !== undefined ? event.end_at : null}
               dressCode={event !== undefined ? event.dresscode : null}
-            />
-            <EventMap
-              address={event !== undefined ? event.location.address : null}
-              latitude={
-                event !== undefined ? event.location.coordinates.x : null
+              ageGroup={event !== undefined ? event.age_group : null}
+              city={event !== undefined ? event.location.city : null}
+              locationName={
+                event !== undefined ? event.location.location_name : null
               }
-              longitude={
-                event !== undefined ? event.location.coordinates.y : null
-              }
+              country={event !== undefined ? event.location.country : null}
             />
           </div>
+          <EventMap
+            latitude={event !== undefined ? event.location.coordinates.x : null}
+            longitude={
+              event !== undefined ? event.location.coordinates.y : null
+            }
+          />
         </div>
       </div>
     </div>

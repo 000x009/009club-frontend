@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
 }
@@ -10,13 +11,11 @@
     cursor: pointer;
     transition: 0.25s ease-in-out;
 }
-.navigation:hover {
-    opacity: 0.8;
-}
 
 .current {
     font-weight: 600;
     color: var(--primary-color);
+    filter: blur(1.5px);
 }
 
 

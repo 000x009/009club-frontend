@@ -1,0 +1,11 @@
+.bar {
+    width: 100%;
+    border: 1px solid white;
+    height: 8px;
+}
+
+.progress {
+    filter: blur(4px);
+    background-color: var(--primary-color);
+    height: 8px;
+}

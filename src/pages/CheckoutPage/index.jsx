@@ -23,33 +23,29 @@ export function CheckoutPage() {
   return (
     <Page>
       <LogoHeader />
-      <Main>
-        <div className={styles.main__container}>
-          <div className={styles.image_container}>
-            <EventImage
-              imageSrc={
-                eventData !== undefined &&
-                getStorageFileURL(eventData.photo.bucket, eventData.photo.key)
-              }
+      <Main className={styles.main}>
+        <div className={styles.image_container}>
+          <EventImage
+            imageSrc={
+              eventData !== undefined &&
+              getStorageFileURL(eventData.photo.bucket, eventData.photo.key)
+            }
+          />
+        </div>
+        <div className={styles.container}>
+          <div className={styles.text__container}>
+            <Navigation>checkout___</Navigation>
+            <CartItemsList
+              items={data?.order_items ?? []}
+              isLoading={isLoading}
+              isFetching={isFetching}
             />
-          </div>
-          <div className={styles.container}>
-            <div className={styles.text__container}>
-              <Navigation>CHECKOUT</Navigation>
-              <CartItemsList
-                items={data?.order_items ?? []}
-                isLoading={isLoading}
-                isFetching={isFetching}
-              />
-              <div className={styles.total}>
-                <Divider />
-                <Total>
-                  {data?.total_amount_usd || <Skeleton width={20} />}
-                </Total>
-              </div>
+            <div className={styles.total}>
+              <Divider />
+              <Total>{data?.total_amount_usd || <Skeleton width={20} />}</Total>
             </div>
-            <Payment orderId={orderId} />
           </div>
+          <Payment orderId={orderId} />
         </div>
       </Main>
     </Page>

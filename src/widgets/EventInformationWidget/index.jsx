@@ -16,11 +16,6 @@ export function EventInformationWidget({ data }) {
 
   return (
     <div className={styles.main__container}>
-      <div className={styles["age-group-container"]}>
-        <Text className={styles["age-group"]}>
-          <Skeleton />
-        </Text>
-      </div>
       <div className={styles.image_container}>
         <EventImage
           imageSrc={
@@ -31,7 +26,7 @@ export function EventInformationWidget({ data }) {
       </div>
       <div className={styles.container}>
         <EventInformationBlock event={data} />
-        <Button onClick={onButtonClick}>CHOOSE TICKETS</Button>
+        <Button onClick={onButtonClick}>tickets</Button>
       </div>
     </div>
   );

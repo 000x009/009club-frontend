@@ -1,5 +1,7 @@
 .nav {
     font-size: 20px;
+    color: var(--primary-color);
+    filter: blur(1px);
     font-weight: 600;
     line-height: 1;
 }

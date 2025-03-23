@@ -1,19 +1,21 @@
 .header {
     align-items: center;
     position: relative;
+    border: 1px solid white;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     padding: 16px 200px;
+    color: white;
     height: 100px;
 }
 
 .logo {
-    position: fixed;
+    position: absolute;
     cursor: pointer;
-    top: 12px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
 }

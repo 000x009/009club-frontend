@@ -1,16 +1,13 @@
-.main__container {
+.main {
     position: relative;
-    padding: 24px;
+    padding: 40px 200px;
     display: flex;
     gap: 16px;
     height: 100%;
-    min-height: 400px;
     width: 100%;
     justify-content: space-between;
-    background-color: var(--secondary-bg-color);
     border-radius: 16px;
     color: white;
-    overflow: hidden;
 }
 
 .container {
@@ -18,7 +15,6 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    overflow: hidden;
 }
 
 .text__container {

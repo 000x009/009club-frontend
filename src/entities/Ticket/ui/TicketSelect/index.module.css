@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    border: 1px solid white;
+    padding: 16px;
+}
+
+.available {
+    border: 1px solid var(--primary-color);
 }
 
 .ticket__container {
@@ -14,7 +20,7 @@
 .right__container {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .add_icon {
@@ -65,4 +71,32 @@
     .name {
         font-size: 14px;
     }
+}
+
+.amount__container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.ticketAmount {
+    opacity: 0.8;
+}
+
+.progress {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.percentage {
+    opacity: 0.8;
+}
+
+.not_available {
+    color: var(--primary-color);
+    filter: blur(1px);
+    text-align: right;
 }

@@ -2,10 +2,7 @@
     flex: 1;
     padding: 16px 24px;
     display: flex;
-    flex-direction: column;
     min-height: calc(100vh - 200px);
-    align-items: center;
-    padding-top: 24px;
 }
 
 /* xs */
@@ -39,13 +36,13 @@
 /* xl */
 @media (min-width: 1280px) {
     .main {
-        padding: 16px 300px;
+        padding: 16px 200px;
     }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
     .main {
-        padding: 16px 300px;
+        padding: 16px 200px;
     }
 }

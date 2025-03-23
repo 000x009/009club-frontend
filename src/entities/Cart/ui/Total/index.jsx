@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 export function Total({ children, className, ...restProps }) {
   return (
     <div className={cc(className, styles.container)} {...restProps}>
-      <Text>Total</Text>
+      <Text className={styles.total}>Total:</Text>
       <Text>{children}€</Text>
     </div>
   );
