@@ -7,3 +7,43 @@
 .total {
     color: var(--primary-color);
 }
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        font-weight: 500;
+    }
+    .total {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        font-weight: 500;
+    }
+    .total {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 14px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        font-weight: 500;
+    }
+    .total {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 14px;
+    }
+}

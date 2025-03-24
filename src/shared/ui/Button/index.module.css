@@ -24,3 +24,27 @@
     font-weight: 600;
     text-transform: lowercase;
 }
+
+/* xs */
+@media (max-width: 475px) {
+    .text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

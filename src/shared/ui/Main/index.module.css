@@ -1,6 +1,6 @@
 .main {
     flex: 1;
-    padding: 16px 24px;
+    padding: 12px;
     display: flex;
     min-height: calc(100vh - 200px);
 }
@@ -8,7 +8,7 @@
 /* xs */
 @media (min-width: 475px) {
     .main {
-        padding: 16px 24px;
+        padding: 16px;
     }
 }
 

@@ -9,28 +9,6 @@
     font-size: 20px;
 }
 
-
-/* xs */
-@media (max-width: 475px) {
-    .header {
-        font-size: 16px;
-    }
-}
-
-/* sm */
-@media (max-width: 640px) {
-    .header {
-        font-size: 16px;
-    }
-}
-
-/* md */
-@media (max-width: 768px) {
-    .header {
-        font-size: 16px;
-    }
-}
-
 .dresscode {
     display: flex;
     gap: 40px;
@@ -70,7 +48,7 @@
 
 .ageGroup {
     color: var(--primary-color);
-    filter: blur(1.5px);
+    filter: blur(1px);
     font-weight: 600;
     font-size: 24px;
 }
@@ -83,4 +61,53 @@
 
 .city {
     opacity: 0.8;
+}
+
+
+/* xs */
+@media (max-width: 475px) {
+    .header {
+        font-size: 16px;
+    }
+    .dresscode {
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .dresscode_label {
+        font-size: 14px;
+        filter: blur(1px);
+    }
+    .time {
+        font-weight: 400;
+    }
+    .dateTime {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .ageGroup {
+        font-weight: 400;
+    }
+    .location {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .city {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .header {
+        font-size: 16px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .header {
+        font-size: 16px;
+    }
 }

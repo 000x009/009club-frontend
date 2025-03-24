@@ -6,7 +6,7 @@ export function Total({ children, className, ...restProps }) {
   return (
     <div className={cc(className, styles.container)} {...restProps}>
       <Text className={styles.total}>Total:</Text>
-      <Text>{children}€</Text>
+      <Text className={styles.price}>{children}€</Text>
     </div>
   );
 }

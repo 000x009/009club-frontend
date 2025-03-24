@@ -1,12 +1,10 @@
 .main__container {
     position: relative;
-    padding: 40px 0;
     display: flex;
     gap: 16px;
     height: 100%;
     width: 100%;
     justify-content: space-between;
-    border-radius: 16px;
     color: white;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
@@ -57,17 +55,11 @@
     .image_container {
         display: none;
     }
-    .main__container {
-        padding: 16px;
-    }
 }
 
 /* sm */
 @media (max-width: 640px) {
     .image_container {
         display: none;
-    }
-    .main__container {
-        padding: 16px;
     }
 }
