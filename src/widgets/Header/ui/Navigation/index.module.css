@@ -15,7 +15,7 @@
 .current {
     font-weight: 600;
     color: var(--primary-color);
-    filter: blur(1.5px);
+    filter: blur(1px);
 }
 
 
