@@ -45,6 +45,7 @@ export function EventTickets() {
 
     if (cartItems.length === 0) {
       alert("Select a ticket");
+      return;
     }
 
     const orderData = {
@@ -115,7 +116,11 @@ export function EventTickets() {
               pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             })}
           />
-          <Button onClick={handleClick} isLoading={isLoading}>
+          <Button
+            className={styles.button}
+            onClick={handleClick}
+            isLoading={isLoading}
+          >
             checkout
           </Button>
         </div>

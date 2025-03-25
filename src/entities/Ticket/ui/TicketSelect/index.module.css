@@ -54,6 +54,9 @@
     .name {
         font-size: 16px;
     }
+    .add_icon:active {
+        scale: 1;
+    }
 }
 
 /* sm */
@@ -67,6 +70,9 @@
     .name {
         font-size: 16px;
     }
+    .add_icon:active {
+        scale: 1;
+    }
 }
 
 /* md */
@@ -79,6 +85,9 @@
     }
     .name {
         font-size: 16px;
+    }
+    .add_icon:active {
+        scale: 1;
     }
 }
 

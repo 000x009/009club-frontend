@@ -60,13 +60,17 @@ export function TicketSelect({
           )}
         </div>
       </div>
-      {ticket.status === "AVAILABLE" ? (
+      {ticket.status === "AVAILABLE" && (
         <div className={styles.progress}>
           <ProgressBar percentage={ticketsSoldPercentage} />
           <Text className={styles.percentage}>{ticketsSoldPercentage}%</Text>
         </div>
-      ) : (
+      )}
+      {ticket.status === "UNAVAILABLE" && (
         <Text className={styles.not_available}>*not available yet</Text>
+      )}
+      {ticket.status === "SOLD_OUT" && (
+        <Text className={styles.not_available}>*sold_out</Text>
       )}
     </div>
   );

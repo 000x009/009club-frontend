@@ -21,8 +21,7 @@
     flex-direction: column;
     gap: 16px;
     overflow-x: hidden;
-    padding-bottom: 16px;
-    padding-right: 8px;
+    padding-bottom: 20px;
 }
 
 .text__container::-webkit-scrollbar {
@@ -105,4 +104,8 @@
     .text__container {
         overflow-y: auto;
     }
-} 
+}
+
+.button {
+    margin-top: 24px;
+}
