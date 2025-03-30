@@ -7,7 +7,7 @@ import { Main } from "@/shared/ui/Main/index.jsx";
 export default function IndexPage() {
   return (
     <Page className={styles.page}>
-      <Header />
+      <Header currentNavItemId={1} />
       <Main className={styles.main}>
         <Events />
       </Main>

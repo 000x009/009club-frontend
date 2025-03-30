@@ -9,13 +9,13 @@
     justify-content: space-between;
     padding: 16px 200px;
     color: white;
-    height: 100px;
+    height: 125px;
 }
 
 .logo {
     position: absolute;
     cursor: pointer;
-    top: 0;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
 }

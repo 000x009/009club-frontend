@@ -5,14 +5,14 @@ import { Bullets } from "@/shared/ui/Bullets/index.jsx";
 import { bulletsList } from "@/widgets/Header/const/bulletsList.js";
 import { Navigation } from "@/widgets/Header/ui/Navigation/index.jsx";
 
-export function Header({ className, ...restProps }) {
+export function Header({ className, currentNavItemId, ...restProps }) {
   const instagramUrl = "https://www.instagram.com/009cult/";
 
   return (
     <header className={cc(styles.header, className)} {...restProps}>
       <Logo className={styles.logo} onClick={() => window.open(instagramUrl)} />
       <div className={styles.container}>
-        <Navigation />
+        <Navigation current={currentNavItemId} />
         <Bullets bullets={bulletsList} className={styles.bullets} />
       </div>
     </header>

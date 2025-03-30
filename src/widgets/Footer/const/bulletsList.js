@@ -1,17 +1,17 @@
 export const bulletsList = [
   {
     id: 1,
-    name: "Telegram",
+    name: "telegram",
     redirectUrl: "https://t.me/zerozeronine",
   },
   {
     id: 2,
-    name: "Instagram",
-    redirectUrl: "https://www.instagram.com/009cult/",
+    name: "instagram",
+    redirectUrl: "https://www.instagram.com/009club.ww/",
   },
   {
     id: 3,
-    name: "Support",
+    name: "support",
     redirectUrl: "https://t.me/zerozeronine_support_bot",
   },
 ];

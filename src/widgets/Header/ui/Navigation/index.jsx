@@ -4,7 +4,7 @@ import cc from "@/shared/lib/helpers/cc.js";
 import { useNavigate } from "react-router";
 import { navigationList } from "@/widgets/Header/const/navigationList.js";
 
-export function Navigation({ className, ...restProps }) {
+export function Navigation({ className, current, ...restProps }) {
   const navigate = useNavigate();
 
   return (
@@ -13,7 +13,7 @@ export function Navigation({ className, ...restProps }) {
         <Text
           className={cc(
             styles.navigation,
-            navigation.isCurrent === true && styles["current"],
+            navigation.id === current && styles["current"],
           )}
           key={navigation.id}
           onClick={() => navigate(navigation.route)}

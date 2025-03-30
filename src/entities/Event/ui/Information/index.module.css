@@ -63,6 +63,10 @@
     opacity: 0.8;
 }
 
+.dresscode_value {
+    filter: blur(1px);
+}
+
 
 /* xs */
 @media (max-width: 475px) {
@@ -71,12 +75,16 @@
     }
     .dresscode {
         gap: 16px;
-        font-size: 14px;
-        font-weight: 400;
+        font-size: 20px;
     }
     .dresscode_label {
-        font-size: 14px;
+        font-weight: 400;
+        font-size: 16px;
         filter: blur(1px);
+    }
+    .dresscode_value {
+        font-weight: 400;
+        font-size: 16px;
     }
     .time {
         font-weight: 400;

@@ -1,4 +1,4 @@
 export function getTicketsSoldPercentage(availableAmount, initialAmount) {
-  let availablePercent = (initialAmount / 100) * availableAmount;
-  return 100 - availablePercent;
+  let percentage = (availableAmount / initialAmount) * 100;
+  return 100 - percentage.toFixed(0);
 }
