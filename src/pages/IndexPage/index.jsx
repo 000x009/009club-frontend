@@ -1,16 +1,19 @@
 import { Header } from "@/widgets/Header/index.jsx";
-import { Events } from "@/widgets/Events/index.jsx";
-import styles from "./index.module.css";
-import { Page } from "@/pages/Page/index.jsx";
-import { Main } from "@/shared/ui/Main/index.jsx";
+import {Notification} from "@/widgets/Notification/index.jsx";
+import {EventsList} from "@/widgets/EventsList/index.jsx";
+import {Footer} from "@/widgets/Footer/index.jsx";
+import {SloganCarousel} from "@/widgets/SloganCarousel/index.jsx";
 
 export default function IndexPage() {
+    const message = "31.05"
+
   return (
-    <Page className={styles.page}>
-      <Header currentNavItemId={1} />
-      <Main className={styles.main}>
-        <Events />
-      </Main>
-    </Page>
+    <>
+        <Notification message={message} />
+        <Header currentNavItemId={1} />
+        <EventsList/>
+        <SloganCarousel/>
+        <Footer/>
+    </>
   );
 }

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FS Mondwest';
+    src: url('FSMondwestRegular.woff2') format('woff2'),
+        url('FSMondwestRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

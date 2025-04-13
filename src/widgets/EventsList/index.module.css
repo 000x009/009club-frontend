@@ -1,31 +1,27 @@
-.footer {
+.container {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    margin-top: 16px;
-    background: var(--primary-color);
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* lg */
 @media (min-width: 1024px) {
-    .footer {
+    .container {
         padding: 16px 100px;
-        margin-top: 40px;
     }
 }
 
 /* xl */
 @media (min-width: 1280px) {
-    .footer {
+    .container {
         padding: 16px 150px;
     }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
-    .footer {
+    .container {
         padding: 16px 200px;
     }
 }

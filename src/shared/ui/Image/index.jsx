@@ -1,6 +1,5 @@
 import { isValidElement, useState } from "react";
 import styles from "./index.module.css";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 export function Image({
@@ -74,8 +73,6 @@ export function Image({
           onError={handleImageError}
         />
       )}
-      {!loaded && <Skeleton height={skeletonHeight} width={skeletonWidth} />}
-
       {needShowFallbackIcon && (
         <div className={styles.fallback}>{fallbackIcon}</div>
       )}

@@ -1,28 +1,26 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation {
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 1rem;
-    transition: 0.25s ease-in-out;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
 }
 
 .current {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    filter: blur(1px);
+  font-weight: 500;
+}
+.current::after {
+  content: "?";
+  color: var(--primary-color);
 }
 
-
 @media (max-width: 768px) {
-    .container {
-        display: none;
-    }
+  .container {
+    display: none;
+  }
 }

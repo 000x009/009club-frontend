@@ -1,0 +1,20 @@
+{
+  "name": "009club",
+  "short_name": "009club",
+  "default_locale": "en",
+  "description": "009Club is the ultimate nightlife hub for underground raves and trap rage. Lose yourself in raw, bass-heavy energy, Ken Carson vibes, and Playboi Carti chaos. Feel free, own the night, and craft memories that hit different. Pull up to Varna's wildest events—your next legendary night starts here.",
+  "id": "/index.html",
+  "start_url": "/index.html",
+  "theme_color": "#FE0000",
+  "background_color": "#000000",
+  "display_override": ["fullscreen", "minimal-ui"],
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "public/logo.svg",
+      "type": "image/svg",
+      "sizes": "300x300"
+    }
+  ]
+}

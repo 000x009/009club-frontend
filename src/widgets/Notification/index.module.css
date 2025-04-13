@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jersey+15&display=swap');
+
+.embla {
+    overflow: hidden;
+    user-select: none;
+    color: black;
+    background: var(--primary-color);
+    font-family: "Jacquard 24", sans-serif;
+    padding: 12px 0;
+    width: 100%;
+    line-height: 1;
+}
+.container {
+    display: flex;
+    gap: 16px;
+}
+.message {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    font-size: 1.5rem !important;
+    min-width: 0;
+}
