@@ -3,7 +3,7 @@ import {EventCard} from "@/entities/Event/ui/EventCard/index.jsx";
 
 export function EventsList() {
     const events = [
-        {id: 1, poster: "/src/shared/assets/poster.png", ticketsURL: "https://partiful.com/e/RO7S0f07M32KXUWFsTCA"},
+        {id: 1, poster: "https://storage.yandexcloud.net/009project-events/inst%20post.png", ticketsURL: "https://partiful.com/e/RO7S0f07M32KXUWFsTCA"},
     ]
 
     return (
