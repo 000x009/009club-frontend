@@ -34,7 +34,6 @@ export function Image({
     if (loaded) {
       return;
     }
-    console.log("loaded");
     setLoaded(true);
     setFailed(false);
     onLoad?.(event);

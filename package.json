@@ -19,6 +19,7 @@
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "i18next": "^24.2.2",
+    "lottie-react": "^2.4.1",
     "react": "^19.0.0",
     "react-aws-s3-typescript": "^2.0.0",
     "react-dom": "^19.0.0",
