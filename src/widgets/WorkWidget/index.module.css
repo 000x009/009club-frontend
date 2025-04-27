@@ -1,0 +1,16 @@
+.wrapper {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 24px;
+}

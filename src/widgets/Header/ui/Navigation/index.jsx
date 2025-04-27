@@ -4,11 +4,11 @@ import cc from "@/shared/lib/helpers/cc.js";
 import { useNavigate } from "react-router";
 import { navigationList } from "@/widgets/Header/const/navigationList.js";
 
-export function Navigation({ className, current, ...restProps }) {
+export function Navigation({ className, current, ref, ...restProps }) {
   const navigate = useNavigate();
 
   return (
-    <div className={cc(className, styles.container)} {...restProps}>
+    <div ref={ref} className={cc(className, styles.container)} {...restProps}>
       {navigationList.map((navigation) => (
         <Text
           className={cc(

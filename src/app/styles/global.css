@@ -3,22 +3,22 @@
 @import url("/src/shared/fonts/fs-mondwest/stylesheet.css");
 
 :root {
-  --bg-color: #000000;
-  --text-color: #ffffff;
-  --secondary-bg-color: #1c1c1c;
-  --primary-color: #ff0000;
-  --label-color: #8e8e93;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --secondary-bg-color: #1c1c1c;
+    --primary-color: #ff0000;
+    --label-color: #8e8e93;
 }
 
 html {
-  font-family: "FS Mondwest", Arial, serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  height: 100%;
+    font-family: "FS Mondwest", Arial, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100%;
 }
 
 body {
-  display: block;
-  overflow-x: hidden;
-  height: 100vh;
+    display: block;
+    overflow-x: hidden;
+    min-height: 100vh;
 }

@@ -20,17 +20,6 @@
   opacity: 0.8;
 }
 
-.button {
-  position: absolute;
-  color: #fff;
-  background-color: #000;
-  font-size: 2rem;
-  padding: 8px 12px;
-  border: 1px #fff solid;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 /* lg */
 @media (min-width: 1024px) {
   .container {
@@ -40,12 +29,6 @@
   }
   .image {
     opacity: 1;
-  }
-  .button {
-    display: none;
-  }
-  .button:hover {
-    display: initial;
   }
 }
 

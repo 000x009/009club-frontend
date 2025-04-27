@@ -1,12 +1,18 @@
-import { Text } from "@/shared/ui/Text/index.jsx";
-import styles from "./index.module.css";
 import cc from "@/shared/lib/helpers/cc.js";
-import { Loader } from "@/shared/ui/Loader/index.jsx";
+import styles from "./index.module.css";
 
-export function Button({ className, children, isLoading, ...restProps }) {
+export function Button({
+  className,
+  component = "button",
+  type = "primary",
+  children,
+  ...rest
+}) {
+  const Component = component;
+
   return (
-    <button className={cc(className, styles.button)} {...restProps}>
-      {isLoading ? <Loader /> : <Text className={styles.text}>{children}</Text>}
-    </button>
+    <Component className={cc(className, styles.button, styles[type])} {...rest}>
+      {children}
+    </Component>
   );
 }

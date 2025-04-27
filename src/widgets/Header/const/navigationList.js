@@ -5,10 +5,4 @@ export const navigationList = [
     route: "/",
     isCurrent: true,
   },
-  {
-    id: 2,
-    name: "/swag",
-    route: "/swag",
-    isCurrent: false,
-  },
 ];
